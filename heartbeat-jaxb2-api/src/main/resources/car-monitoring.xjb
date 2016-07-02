@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jxb:bindings version="2.0" xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
+			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
+			jxb:extensionBindingPrefixes="xjc">
+	
+ 
+  <jxb:bindings schemaLocation="car-monitoring.xsd" node="/xs:schema">
+ 
+    <jxb:globalBindings >
+        <xjc:serializable uid="210125"/>
+        <xjc:simple />   
+        <xjc:javaType name="java.lang.Integer" xmlType="xs:integer" 
+            adapter="com.ypg.car.monitoring.api.jaxb2.adapter.IntegerTypeXmlAdapter"  /> 
+       <xjc:javaType name="java.util.Calendar" xmlType="xs:date"  
+            adapter="com.ypg.car.monitoring.api.jaxb2.adapter.CalendarTimeTypeXmlAdapter" />
+       <xjc:javaType name="java.util.Calendar" xmlType="xs:dateTime"  
+            adapter="com.ypg.car.monitoring.api.jaxb2.adapter.CalendarTimeTypeXmlAdapter" />
+        
+    </jxb:globalBindings>    
+       
+	<!-- -->
+    <jxb:schemaBindings>
+      <jxb:package name="com.ypg.car.monitoring.api.jaxb2">
+      </jxb:package>
+    </jxb:schemaBindings>
+	 
+   </jxb:bindings> 
+   
+  
+</jxb:bindings>

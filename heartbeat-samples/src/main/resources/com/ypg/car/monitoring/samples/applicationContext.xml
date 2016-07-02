@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns:p="http://www.springframework.org/schema/p" xmlns:context="http://www.springframework.org/schema/context"
+		xmlns:jee="http://www.springframework.org/schema/jee" xmlns:tx="http://www.springframework.org/schema/tx"
+		xsi:schemaLocation="
+			http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+			http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
+			http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-2.5.xsd
+			http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+    
+	<!-- Configuration du service de monitoring. Nota : les proprietes nodeName et appServerName doivent etre
+    	externalisees via WSTools car elles dependent de l'environnement. -->
+    <bean
+    	class="com.ypg.car.monitoring.api.impl.DefaultMonitoringService">
+
+    	<!-- On definit les proprietes communes : -->
+
+    	<property name="webAppName" value="ccj-comp-monitoring-samples" />
+<!--    	<property name="nodeName" value="testNode" />-->
+<!--    	<property name="appServerName" value="testAppServer" />-->
+
+    	<!-- Liste des tests techniques : -->
+
+    	<property name="technicalTests">
+    		<list>
+    			<ref bean="jvmMonitor" /> 
+    		</list>
+    	</property>
+
+    	<!-- Pour ajouter des tests de dépendances : utiliser le même principe
+    		que ci-dessus, avec la propriété "dependencyTests". -->
+
+    </bean>
+    
+    <!-- permet de vérifier que la version de JVM sur laquelle on s'exécute est bien 1.5 -->
+    <bean id="jvmMonitor"
+    	class="com.ypg.car.monitoring.monitors.JVMMonitor">
+    	<property name="supportedJvmVersion" value="1.6" />
+    </bean>
+	
+ 
+    <context:annotation-config />
+
+                                         
+  <context:component-scan base-package="com.ypg.car.monitoring.samples" />
+  
+</beans>

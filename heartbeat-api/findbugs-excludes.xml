@@ -1,0 +1,9 @@
+<FindBugsFilter>
+	<!-- Exclusion des classes XmlBeans -->
+	<Match>
+		<Package name="com.ypg.car.monitoring.api.xmlbeans" />
+	</Match>
+	<Match>
+		<Package name="com.ypg.car.monitoring.api.xmlbeans.impl" />
+	</Match>
+</FindBugsFilter>
