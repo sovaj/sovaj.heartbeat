@@ -1,0 +1,50 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="application-test" type="application"/>
+
+  <xs:complexType name="application">
+    <xs:sequence>
+      <xs:element name="technical-tests" type="group"/>
+      <xs:element name="dependency-tests" type="group" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="schemaVersion" type="xs:double" use="required"/>
+    <xs:attribute name="startMonitoring" type="xs:dateTime" use="required"/>
+    <xs:attribute name="appServerName" type="xs:string"/>
+    <xs:attribute name="nodeName" type="xs:string"/>
+    <xs:attribute name="webAppName" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="group">
+    <xs:sequence>
+      <xs:element name="test" type="test" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="status" type="groupStatus" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="test">
+    <xs:sequence>
+      <xs:element name="description" type="xs:string" minOccurs="0"/>
+      <xs:element name="errorMessage" type="xs:string" minOccurs="0"/>
+      <xs:element name="stackTrace" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="duration" type="xs:long" use="required"/>
+    <xs:attribute name="status" type="status" use="required"/>
+    <xs:attribute name="type" type="xs:string" use="required"/>
+    <xs:attribute name="name" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:simpleType name="status">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="OK"/>
+      <xs:enumeration value="SKIP"/>
+      <xs:enumeration value="KO"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="groupStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="OK"/>
+      <xs:enumeration value="KO"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

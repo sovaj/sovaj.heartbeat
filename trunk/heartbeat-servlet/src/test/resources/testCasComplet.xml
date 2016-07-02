@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="
+	 http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+	">
+
+  <bean class="com.ypg.car.monitoring.api.impl.DefaultMonitoringService">
+
+    <!-- Proprietes de base -->
+
+    <constructor-arg index="0" value="testWebApp" />
+    <constructor-arg index="1" value="testNode" />
+    <constructor-arg index="2" value="testAppServer" />
+
+    <!-- Liste des tests techniques -->
+
+    <property name="technicalTests">
+      <list>
+        <bean class="com.ypg.car.monitoring.servlet.DummyMonitor">
+          <property name="name" value="monitor 1" />
+        </bean>
+        <bean class="com.ypg.car.monitoring.servlet.DummyMonitor">
+          <property name="name" value="monitor 2" />
+        </bean>
+      </list>
+    </property>
+
+    <!-- Liste des tests de dépendance -->
+
+    <property name="dependencyTests">
+      <list>
+        <bean class="com.ypg.car.monitoring.servlet.DummyMonitor">
+          <property name="name" value="monitor 3" />
+        </bean>
+        <bean class="com.ypg.car.monitoring.servlet.DummyMonitor">
+          <property name="name" value="monitor 4" />
+        </bean>
+      </list>
+    </property>
+  </bean>
+
+</beans>
