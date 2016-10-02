@@ -2,21 +2,59 @@
     <modelVersion>4.0.0</modelVersion>
 
 
-    <groupId>org.mdubois.heartbeat</groupId>
+    <groupId>io.sovaj.heartbeat</groupId>
     <artifactId>heartbeat-parent</artifactId>
     <version>1.0.0.0-SNAPSHOT</version>
-    
+
     <packaging>pom</packaging>
 
+    <name>Basics tool for a good application</name>
+    <description>Project to help in developing robust applications</description>
+    <url>https://github.com/sovaj/sovaj.heartbeat</url>
+
+    <issueManagement>
+        <url>https://github.com/sovaj/sovaj.heartbeat/issues</url>
+        <system>GitHub Issues</system>
+    </issueManagement>
+
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
     <scm>
-        <connection>scm:svn:https://svn.ypg.com/svn/osp/dev/heartbeat/trunk</connection>
-        <developerConnection>scm:svn:https://svn.ypg.com/svn/osp/dev/heartbeat/trunk</developerConnection>
-        <url>https://svn.ypg.com/svn/osp/dev/heartbeat/trunk</url>
+        <url>https://github.com/sovaj/sovaj.heartbeat</url>
+        <connection>scm:git:git://github.com/sovaj/sovaj.heartbeat.git</connection>
+        <developerConnection>scm:git:git@github.com:sovaj/sovaj.heartbeat.git</developerConnection>
     </scm>
+
+    <developers>
+        <developer>
+            <email>dubois.mickael@gmail.com</email>
+            <name>Dubois Mickael</name>
+            <url>https://github.com/sovaj</url>
+            <id>sovaj</id>
+        </developer>
+        <developer>
+            <email>Manuel Ferland</email>
+            <name>Dubois Mickael</name>
+            <url>https://github.com/manolomtl</url>
+            <id>manolomtl</id>
+        </developer>
+        <developer>
+            <email>Manuel Ferland</email>
+            <name>pfernand@gmail.com</name>
+            <url>https://github.com/pfernan</url>
+            <id>pfernan</id>
+        </developer>
+    </developers>
 
     <properties>
         <spring.version>4.1.8.RELEASE</spring.version>
-		
+
         <junit.version>4.11</junit.version>
         <xmlunit.version>1.4</xmlunit.version>
         <mockito.version>1.9.5</mockito.version>

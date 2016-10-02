@@ -87,7 +87,7 @@ public class HTTPMonitorTest extends AbstractMonitorTestCase {
          * Assert
          */
         assertNotNull(elem);
-        Assert.assertTrue("Le monitoring doit �tre ok", elem.getTestIsOk());
+        Assert.assertTrue("Monitoring should be OK", elem.getTestIsOk());
         assertNull("errorMessage", elem.getErrorMessage());
         assertNull("exception", elem.getException());
         assertEquals("type", Type.URL, elem.getType());
@@ -276,7 +276,7 @@ public class HTTPMonitorTest extends AbstractMonitorTestCase {
         final String urlComplete = server.getServerURL() + urlLente;
 
         // Timeout max pour attendre une reponse
-        final int monitoringTimeout = 2000;
+        final int monitoringTimeout = 3000;
 
         /*
          * Temps pour que la servlet r�ponde, inf�rieur au temps autoris� pour
