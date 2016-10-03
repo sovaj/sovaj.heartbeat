@@ -4,7 +4,7 @@
 	 http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
 	">
 
-  <bean class="com.ypg.car.monitoring.api.impl.DefaultMonitoringService">
+  <bean class="io.sovaj.heartbeat.api.impl.DefaultMonitoringService">
 
     <!-- Proprietes de base -->
 
@@ -16,10 +16,10 @@
 
     <property name="technicalTests">
       <list>
-        <bean class="com.ypg.car.monitoring.servlet.DummyMonitor">
+        <bean class="io.sovaj.heartbeat.servlet.DummyMonitor">
           <property name="name" value="monitor 1" />
         </bean>
-        <bean class="com.ypg.car.monitoring.servlet.DummyMonitor">
+        <bean class="io.sovaj.heartbeat.servlet.DummyMonitor">
           <property name="name" value="monitor 2" />
         </bean>
       </list>
@@ -29,10 +29,10 @@
 
     <property name="dependencyTests">
       <list>
-        <bean class="com.ypg.car.monitoring.servlet.DummyMonitor">
+        <bean class="io.sovaj.heartbeat.servlet.DummyMonitor">
           <property name="name" value="monitor 3" />
         </bean>
-        <bean class="com.ypg.car.monitoring.servlet.DummyMonitor">
+        <bean class="io.sovaj.heartbeat.servlet.DummyMonitor">
           <property name="name" value="monitor 4" />
         </bean>
       </list>

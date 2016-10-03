@@ -4,7 +4,7 @@
 	 http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
 	">
 
-  <bean class="com.ypg.car.monitoring.api.impl.DefaultMonitoringService">
+  <bean class="io.sovaj.heartbeat.api.impl.DefaultMonitoringService">
 
       <constructor-arg index="0" value="testWebApp" />
       <constructor-arg index="1" value="" />

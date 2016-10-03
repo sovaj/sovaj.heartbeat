@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="ISO-8859-1" ?>
 <configuration>
-<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
-<layout class="ch.qos.logback.classic.PatternLayout">
-<pattern>%date %-5level %logger{35} - %msg%n</pattern>
-</layout>
-</appender>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <pattern>%date %-5level %logger{35} - %msg%n</pattern>
+        </layout>
+    </appender>
 
 
- 
-<logger name="com.ypg.car">
-    <level value="DEBUG" />
-  </logger>
+
+    <logger name="io.sovaj.heartbeat">
+        <level value="DEBUG" />
+    </logger>
 
 
-<logger name="org.springframework">
-    <level value="INFO" />
-  </logger>
+    <logger name="org.springframework">
+        <level value="INFO" />
+    </logger>
 
-  <logger name="org">
-    <level value="INFO" />
-  </logger>
+    <logger name="org">
+        <level value="INFO" />
+    </logger>
 
-  <logger name="org.granite">
-    <level value="INFO" />
-  </logger>
- 
-  <root>
-    <level value="DEBUG" />
-    <appender-ref ref="STDOUT" />
-    <!--appender-ref ref="FILE" /-->
-  </root>
+    <logger name="org.granite">
+        <level value="INFO" />
+    </logger>
 
- 
+    <root>
+        <level value="DEBUG" />
+        <appender-ref ref="STDOUT" />
+        <!--appender-ref ref="FILE" /-->
+    </root>
+
+
 </configuration>

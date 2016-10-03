@@ -7,7 +7,7 @@
         <artifactId>heartbeat-parent</artifactId>
         <version>1.0.0.0-SNAPSHOT</version>
     </parent>
-	 
+
     <artifactId>heartbeat-jaxb2-api</artifactId>
     <packaging>jar</packaging>
     <version>1.0.0.0-SNAPSHOT</version>
@@ -40,22 +40,6 @@
                     <forceRegenerate>true</forceRegenerate>
                 </configuration>
             </plugin>
-            <plugin>
-                <inherited>true</inherited>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-source-plugin</artifactId>
-                <version>2.2.1</version>
-                <executions>
-                    <execution>
-                        <id>attach-sources</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>jar</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
         </plugins>
     </build>
 </project>
-

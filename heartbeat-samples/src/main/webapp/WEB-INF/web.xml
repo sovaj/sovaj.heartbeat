@@ -4,36 +4,36 @@
 
 <web-app>
     <display-name>TestServletMonitoring</display-name>
-	<context-param>
-		<param-name>webAppRootKey</param-name>
-		<param-value>root_ccj_comp_monitoring_samples</param-value>
-	</context-param>  
-  <context-param>
-    <param-name>contextConfigLocation</param-name>
-    <param-value>classpath*:/com/ypg/car/monitoring/samples/applicationContext.xml</param-value>
-  </context-param>
-  
-  <listener>
-    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
-  </listener>
-  
+    <context-param>
+        <param-name>webAppRootKey</param-name>
+        <param-value>root_comp_monitoring_samples</param-value>
+    </context-param>
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>classpath*:/io/sovaj/heartbeat/samples/applicationContext.xml</param-value>
+    </context-param>
 
-  <servlet>
-    <servlet-name>monitoring</servlet-name>
-    <servlet-class>com.ypg.car.monitoring.servlet.MonitoringServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>monitoring</servlet-name>
-    <url-pattern>/Monitoring</url-pattern>
-  </servlet-mapping>
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
 
-  <servlet>
-    <servlet-name>javaPlusRapideAuMonde</servlet-name>
-    <servlet-class>com.ypg.car.monitoring.servlet.JavaPlusRapideAuMondeServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>javaPlusRapideAuMonde</servlet-name>
-    <url-pattern>/JavaPlusRapideAuMonde</url-pattern>
-  </servlet-mapping>
+
+    <servlet>
+        <servlet-name>monitoring</servlet-name>
+        <servlet-class>io.sovaj.heartbeat.servlet.MonitoringServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>monitoring</servlet-name>
+        <url-pattern>/Monitoring</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>javaPlusRapideAuMonde</servlet-name>
+        <servlet-class>io.sovaj.heartbeat.servlet.JavaPlusRapideAuMondeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>javaPlusRapideAuMonde</servlet-name>
+        <url-pattern>/JavaPlusRapideAuMonde</url-pattern>
+    </servlet-mapping>
 
 </web-app>
