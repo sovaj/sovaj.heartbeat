@@ -4,7 +4,7 @@
 
     <groupId>io.sovaj.heartbeat</groupId>
     <artifactId>heartbeat-parent</artifactId>
-    <version>1.0.0.0.RELEASE</version>
+    <version>1.0.0.1-SNAPSHOT</version>
 
     <packaging>pom</packaging>
 
@@ -29,7 +29,7 @@
         <url>https://github.com/sovaj/sovaj.heartbeat</url>
         <connection>scm:git:git://github.com/sovaj/sovaj.heartbeat.git</connection>
         <developerConnection>scm:git:git@github.com:sovaj/sovaj.heartbeat.git</developerConnection>
-      <tag>heartbeat-parent-1.0.0.0.RELEASE</tag>
+      <tag>HEAD</tag>
   </scm>
 
     <developers>
