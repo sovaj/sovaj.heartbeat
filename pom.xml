@@ -8,7 +8,7 @@
 
     <packaging>pom</packaging>
 
-    <name>Heartbeat Servlet App</name>
+    <name>SOVAJ :: ${project.artifactId}</name>
     <description>Heartbeat Servlet App to use in all WAR application</description>
     <url>https://github.com/sovaj/sovaj.heartbeat</url>
 
